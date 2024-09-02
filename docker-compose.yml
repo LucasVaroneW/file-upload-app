@@ -15,9 +15,6 @@ services:
     container_name: backend
     ports:
       - "3001:3001"
-    volumes:
-      - ./backend:/usr/src/app
-      - ./backend/uploads:/usr/src/app/uploads
     depends_on:
       - mongodb
 
