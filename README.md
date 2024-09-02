@@ -17,12 +17,11 @@ Clona este repositorio en tu máquina local:
 
 ```bash
 git clone <https://github.com/LucasVaroneW/file-upload-app/>
-cd <nombre_del_directorio>
+cd <file-upload-app>
+```
 2. Configurar Variables de Entorno
 Asegúrate de tener un archivo .env en la carpeta raíz del backend con las siguientes variables configuradas:
-```
-2. El archivo .env debe estar ubicado en la carpeta backend.
-
+El archivo .env debe estar ubicado en la carpeta backend.
 ```bash
 MONGO_URI=mongodb://mongo:27017/tu_basededatos
 PORT=3001
@@ -30,7 +29,6 @@ PORT=3001
 
 3. Construir y Ejecutar con Docker
 Usa Docker Compose para construir y ejecutar los servicios del backend y frontend:
-
 
 ```bash
 docker-compose up --build
