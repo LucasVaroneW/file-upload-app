@@ -7,7 +7,6 @@ Este proyecto es una aplicación de gestión de archivos que permite subir, visu
 Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
 - [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
 
 ## Configuración del Proyecto
 
@@ -23,7 +22,7 @@ cd <file-upload-app>
 Asegúrate de tener un archivo .env en la carpeta raíz del backend con las siguientes variables configuradas:
 El archivo .env debe estar ubicado en la carpeta backend.
 ```bash
-MONGO_URI=mongodb://mongo:27017/tu_basededatos
+MONGO_URI=mongodb://localhost:27017/test_assesment
 PORT=3001
 ```
 
@@ -42,7 +41,7 @@ Frontend: http://localhost:3000
 Backend: http://localhost:3001
 
 Instrucciones de Uso
-Subir Archivos: Ve a la pestaña "File Upload" y selecciona un archivo para subir.
+Subir Archivos: Ve al botón "File Upload" y selecciona un archivo para subir.
 Ver Archivos Subidos: Ve a la pestaña "Uploaded Files" para ver la lista de archivos subidos, donde puedes filtrar, descargar o eliminar archivos.
 Descargar Archivos: Selecciona uno o varios archivos y haz clic en "Download" para descargarlos.
 Eliminar Archivos: Haz clic en el botón de "Delete" junto a cualquier archivo para eliminarlo.
@@ -57,4 +56,10 @@ Reconstruir los contenedores:
 ```bash
 docker-compose up --build
 ```
+### Conclusión
 
+Gracias por revisar el proyecto de Gestión de Archivos. Este README proporciona una guía completa para configurar y ejecutar la aplicación tanto con Docker.
+
+---
+
+Hecho con 💻 por [Lucas Varone](https://github.com/LucasVaroneW)
