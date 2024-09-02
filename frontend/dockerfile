@@ -1,0 +1,17 @@
+# Dockerfile para el frontend
+FROM node:18 AS build
+
+# Crear y establecer el directorio de trabajo
+WORKDIR /usr/src/app
+
+# Copiar archivos de proyecto
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Crear una imagen de Nginx para servir la aplicación
+FROM nginx:alpine
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
